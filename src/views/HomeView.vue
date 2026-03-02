@@ -1,32 +1,59 @@
 <template>
   <section class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-24 overflow-hidden">
 
-    <!-- Background video -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      class="absolute inset-0 w-full h-full object-cover"
-    >
-      <source src="/videos/hero.mp4" type="video/mp4" />
-    </video>
+    <!-- Particle network background -->
+    <vue-particles
+      id="tsparticles"
+      class="absolute inset-0 w-full h-full"
+      :options="{
+        background: { color: { value: 'transparent' } },
+        fpsLimit: 60,
+        interactivity: {
+          events: {
+            onHover: { enable: true, mode: 'grab' },
+            onClick: { enable: true, mode: 'push' }
+          },
+          modes: {
+            grab: { distance: 160, links: { opacity: 0.6 } },
+            push: { quantity: 3 }
+          }
+        },
+        particles: {
+          color: { value: '#1A7A4A' },
+          links: {
+            color: '#A9B8C3',
+            distance: 150,
+            enable: true,
+            opacity: 0.3,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: 'none',
+            outModes: 'out'
+          },
+          number: { value: 90, density: { enable: true } },
+          opacity: { value: 0.5 },
+          shape: { type: 'circle' },
+          size: { value: { min: 1, max: 2.5 } }
+        },
+        detectRetina: true
+      }"
+    />
 
-    <!-- Dark overlay so text stays readable -->
-    <div class="absolute inset-0 bg-space-cadet/75"></div>
-
-    <!-- Content sits above video -->
+    <!-- Content sits above particles -->
     <div class="relative z-10">
-      <p class="text-tan text-xs font-semibold tracking-widest uppercase mb-6">
+      <p class="text-silver text-sm font-semibold tracking-widest uppercase mb-6">
         Web Design &amp; Development
       </p>
 
       <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 max-w-4xl">
-        We Build Websites<br />
-        <span class="text-tan">That Work.</span>
+      Building Websites<br />
+        <span class="text-emerald"><em>That Work.</em></span>
       </h1>
 
-      <p class="text-white text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+      <p class="text-ivory text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
         Custom websites and web applications crafted for performance,
         accessibility, and real results.
       </p>
@@ -34,13 +61,13 @@
       <div class="flex flex-wrap gap-4">
         <RouterLink
           to="/portfolio"
-          class="bg-mortuum text-white px-8 py-3 rounded font-semibold tracking-wide hover:opacity-90 transition-opacity"
+          class="bg-emerald/20 backdrop-blur-sm border border-emerald/60 text-silver px-8 py-3 rounded font-semibold tracking-wide hover:bg-emerald/40 transition-colors"
         >
           View Our Work
         </RouterLink>
         <RouterLink
           to="/contact"
-          class="border border-tan text-tan px-8 py-3 rounded font-semibold tracking-wide hover:bg-tan hover:text-space-cadet transition-colors"
+          class="border border-silver text-silver px-8 py-3 rounded font-semibold tracking-wide hover:bg-silver hover:text-navy transition-colors"
         >
           Get In Touch
         </RouterLink>
