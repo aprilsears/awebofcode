@@ -1,13 +1,12 @@
 <template>
-  <header class="sticky top-0 z-50 bg-steel/80 backdrop-blur-md border-b border-silver/20 px-12 py-6 flex items-center justify-between">
-    <RouterLink to="/" class="outline-underline padding-1rem border-1rem border-emerald hover:opacity-75 transition-opacity duration-200">
-      <span style="font-family: 'Pacifico', cursive;" class="text-silver text-2xl opacity-80">
-  A Web of Code
-</span>
-
+  <header class="sticky top-0 z-50 bg-steel/15 backdrop-blur-md border-b border-silver/20 px-4 sm:pl-3 sm:pr-8 lg:pl-4 lg:pr-12 py-2 flex flex-row items-center justify-between gap-3">
+    <RouterLink to="/" class="shrink-0 hover:opacity-75 transition-opacity duration-200">
+      <div class="px-3 py-1 rounded-2xl bg-linear-to-br from-emerald/40 via-silver/20 to-steel/60">
+        <img src="/src/assets/logo.png" alt="A Web of Code" class="h-25 w-auto rounded-2xl mix-blend-screen block" />
+      </div>
     </RouterLink>
 
-    <nav class="flex gap-10 text-xs font-semibold tracking-widest uppercase">
+    <nav class="flex flex-col items-end sm:flex-row sm:items-center gap-1.5 sm:gap-6 lg:gap-10 text-xs font-semibold tracking-widest uppercase">
       <RouterLink
         v-for="link in links"
         :key="link.to"
