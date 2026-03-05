@@ -9,7 +9,7 @@
 
       <!-- Intro -->
       <section class="mb-20">
-        <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-4">Who We Are</p>
+        <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-4">What is A Web of Code?</p>
         <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-8">
           About <span class="text-emerald">A Web of Code</span>
         </h1>
@@ -39,8 +39,8 @@
 
       <!-- Approach -->
       <section class="mb-20 bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-2xl p-10 md:p-14">
-        <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-4">How We Work</p>
-        <h2 class="text-3xl font-bold text-ivory mb-10">Our Approach</h2>
+        <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-4">How It Works</p>
+        <h2 class="text-3xl font-bold text-ivory mb-10">Approach</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div v-for="step in approach" :key="step.title" class="flex flex-col gap-3">
             <div class="w-10 h-10 rounded-lg bg-emerald/20 border border-emerald/30 flex items-center justify-center text-emerald font-bold text-sm">

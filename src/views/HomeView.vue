@@ -44,16 +44,14 @@
 
     <!-- Content sits above particles -->
     <div class="relative z-10">
-      <p class="text-silver text-sm font-semibold tracking-widest uppercase mb-6">
-        Web Design &amp; Development
-      </p>
+      <p class="text-emerald text-sm font-semibold tracking-widest uppercase mb-8"> Web Design &amp; Development</p>
 
       <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 max-w-4xl">
       Building Websites<br />
         <span class="text-emerald"><em>That Work.</em></span>
       </h1>
 
-      <p class="text-ivory text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+      <p class="text-ivory text-xl md:text-2xl font-medium max-w-xl mb-12 leading-relaxed">
         Custom websites and web applications crafted for performance,
         accessibility, and real results.
       </p>
@@ -61,7 +59,7 @@
       <div class="flex flex-wrap gap-4">
         <RouterLink
           to="/portfolio"
-          class="bg-emerald/20 backdrop-blur-sm border border-emerald/60 text-silver px-8 py-3 rounded font-semibold tracking-wide hover:bg-emerald/40 transition-colors"
+          class="bg-emerald border border-emerald text-ivory px-8 py-3 rounded font-semibold tracking-wide hover:bg-emerald/80 transition-colors"
         >
           View Our Work
         </RouterLink>

@@ -53,7 +53,7 @@
           <label class="block text-silver text-sm font-medium mb-2">Service of Interest</label>
           <select
             v-model="form.service"
-            class="w-full bg-steel/30 backdrop-blur-sm border border-silver/20 rounded-xl px-4 py-3 text-ivory focus:outline-none focus:border-emerald/60 transition-colors appearance-none"
+            class="w-full bg-steel/30 backdrop-blur-sm border border-silver/20 rounded-xl px-4 py-3 text-ivory focus:outline-none focus:border-emerald/60 transition-colors appearance-none [&>option]:bg-navy [&>option]:text-ivory"
           >
             <option value="" disabled>Select a service...</option>
             <option value="landing-page">Landing Page</option>
@@ -170,7 +170,7 @@ async function submitForm() {
   error.value = false
 
   try {
-    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    const res = await fetch('https://formspree.io/f/mjgabaop', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(form),
