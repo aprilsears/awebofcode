@@ -1,9 +1,7 @@
 <template>
   <header class="sticky top-0 z-50 bg-steel/15 backdrop-blur-md border-b border-silver/20 px-4 sm:pl-3 sm:pr-8 lg:pl-4 lg:pr-12 py-2 flex flex-row items-center justify-between gap-3">
     <RouterLink to="/" class="shrink-0 hover:opacity-75 transition-opacity duration-200">
-      <div class="p-0.5 rounded-2xl bg-linear-to-br from-emerald/60 via-silver/20 to-steel/80 filter-[drop-shadow(0_0_10px_rgba(26,122,74,0.35))]">
-        <img src="/src/assets/logo.png" alt="A Web of Code" class="h-14 w-auto rounded-2xl mix-blend-screen block" />
-      </div>
+      <span style="font-family: 'Sixtyfour', monospace;" class="text-emerald text-lg tracking-wider">A Web of Code</span>
     </RouterLink>
 
     <nav class="flex flex-col items-end sm:flex-row sm:items-center gap-1.5 sm:gap-6 lg:gap-10 text-xs font-semibold tracking-widest uppercase">
@@ -19,6 +17,10 @@
   <main>
     <RouterView />
   </main>
+
+  <footer class="flex justify-center py-10 border-t border-silver/10">
+    <img src="/src/assets/logo.png" alt="A Web of Code" class="w-24 h-auto mix-blend-screen opacity-70" />
+  </footer>
 </template>
 
 <script setup>

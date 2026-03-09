@@ -100,6 +100,14 @@ const filters = ['All', 'Vue', 'JavaScript', 'HTML/CSS', 'Node.js']
 
 const projects = [
   {
+    title: 'Mock Store',
+    desc: 'A mock e-commerce storefront demonstrating the ability to build and manage a full product-browsing experience.',
+    url: 'https://github.com/aprilsears/MockStore',
+    icon: '🛒',
+    tech: ['Vue', 'JavaScript', 'CSS'],
+    tags: ['Vue', 'JavaScript'],
+  },
+  {
     title: 'A Web of Code',
     desc: 'Business website for A Web of Code — built with Vue 3, Tailwind CSS v4, and tsParticles.',
     url: 'https://github.com/aprilsears/awebofcode',

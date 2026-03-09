@@ -44,7 +44,7 @@
 
     <!-- Content sits above particles -->
     <div class="relative z-10">
-      <p class="text-emerald text-sm font-semibold tracking-widest uppercase mb-8"> Web Design &amp; Development</p>
+      <p class="text-emerald text-sm font-semibold tracking-widest uppercase mb-8">Web Design &amp; Development</p>
 
       <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 max-w-4xl">
       Building Websites<br />
