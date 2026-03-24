@@ -6,16 +6,23 @@ import PortfolioView from '../views/PortfolioView.vue'
 import ContactView from '../views/ContactView.vue'
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/about', component: AboutView },
-  { path: '/services', component: ServicesView },
-  { path: '/portfolio', component: PortfolioView },
-  { path: '/contact', component: ContactView }
+  { path: '/', component: HomeView, meta: { title: 'A Web of Code | Custom Web Development' } },
+  { path: '/about', component: AboutView, meta: { title: 'About | A Web of Code' } },
+  { path: '/services', component: ServicesView, meta: { title: 'Services | A Web of Code' } },
+  { path: '/portfolio', component: PortfolioView, meta: { title: 'Portfolio | A Web of Code' } },
+  { path: '/contact', component: ContactView, meta: { title: 'Contact | A Web of Code' } },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title || 'A Web of Code'
 })
 
 export default router

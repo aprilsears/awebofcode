@@ -67,6 +67,25 @@
         </div>
       </section>
 
+      <!-- Why Work With Me -->
+      <section class="mb-20">
+        <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-4">Why A Web of Code</p>
+        <h2 class="text-3xl font-bold text-ivory mb-10">What sets this studio apart</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div
+            v-for="item in differentiators"
+            :key="item.title"
+            class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-6 hover:border-emerald/30 transition-colors duration-200"
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-emerald text-lg font-bold">✦</span>
+              <h3 class="text-ivory font-semibold">{{ item.title }}</h3>
+            </div>
+            <p class="text-silver text-sm leading-relaxed">{{ item.desc }}</p>
+          </div>
+        </div>
+      </section>
+
       <!-- Connect -->
       <section>
         <p class="text-emerald text-xs font-semibold tracking-widest uppercase mb-8">Connect</p>
@@ -123,6 +142,25 @@ const approach = [
     number: '03',
     title: 'Launch',
     desc: 'Thorough testing, optimized performance, and a smooth handoff with documentation.',
+  },
+]
+
+const differentiators = [
+  {
+    title: 'No templates, no shortcuts',
+    desc: 'Every project is built from scratch and tailored to your goals — not retrofitted from a generic theme.',
+  },
+  {
+    title: 'Clean, maintainable code',
+    desc: 'You get well-documented, readable code you can hand off to any developer — not a black box you\'re locked into.',
+  },
+  {
+    title: 'Direct communication',
+    desc: 'You work directly with the developer — no account managers, no handoffs, no lost context.',
+  },
+  {
+    title: 'Mobile-first by default',
+    desc: 'Every site is designed and tested for all screen sizes from day one, not patched for mobile after the fact.',
   },
 ]
 

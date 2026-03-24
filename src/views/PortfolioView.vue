@@ -41,32 +41,47 @@
           :href="project.url"
           target="_blank"
           rel="noopener noreferrer"
-          class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-6 flex flex-col hover:border-emerald/40 hover:bg-steel/50 transition-all duration-200 group"
+          class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl overflow-hidden flex flex-col hover:border-emerald/40 hover:bg-steel/50 transition-all duration-200 group"
+          data-reveal
         >
-          <!-- Top row -->
-          <div class="flex items-start justify-between mb-4">
-            <div class="w-10 h-10 rounded-lg bg-emerald/15 border border-emerald/20 flex items-center justify-center text-xl">
-              {{ project.icon }}
+          <!-- Preview image (if provided) or placeholder -->
+          <div class="relative w-full h-40 bg-navy/60 overflow-hidden border-b border-silver/10">
+            <img
+              v-if="project.preview"
+              :src="project.preview"
+              :alt="project.title + ' preview'"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+            />
+            <div v-else class="w-full h-full flex items-center justify-center">
+              <div class="w-14 h-14 rounded-xl bg-emerald/15 border border-emerald/20 flex items-center justify-center text-3xl opacity-60">
+                {{ project.icon }}
+              </div>
             </div>
-            <svg class="w-4 h-4 text-silver/40 group-hover:text-emerald transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
+            <!-- External link indicator on hover -->
+            <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <svg class="w-4 h-4 text-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
           </div>
 
-          <h2 class="text-ivory font-bold text-lg mb-2 group-hover:text-emerald transition-colors duration-200">
-            {{ project.title }}
-          </h2>
-          <p class="text-silver text-sm leading-relaxed mb-6 flex-1">{{ project.desc }}</p>
+          <!-- Card body -->
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="text-ivory font-bold text-lg mb-2 group-hover:text-emerald transition-colors duration-200">
+              {{ project.title }}
+            </h2>
+            <p class="text-silver text-sm leading-relaxed mb-6 flex-1">{{ project.desc }}</p>
 
-          <!-- Tech tags -->
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="tech in project.tech"
-              :key="tech"
-              class="text-xs px-2 py-0.5 rounded-full bg-navy/60 border border-silver/20 text-silver/70"
-            >
-              {{ tech }}
-            </span>
+            <!-- Tech tags -->
+            <div class="flex flex-wrap gap-2">
+              <span
+                v-for="tech in project.tech"
+                :key="tech"
+                class="text-xs px-2 py-0.5 rounded-full bg-navy/60 border border-silver/20 text-silver/70"
+              >
+                {{ tech }}
+              </span>
+            </div>
           </div>
         </a>
       </section>
@@ -93,6 +108,9 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useScrollReveal } from '@/composables/useScrollReveal'
+
+useScrollReveal()
 
 const activeFilter = ref('All')
 
@@ -104,6 +122,7 @@ const projects = [
     desc: 'A mock e-commerce storefront demonstrating the ability to build and manage a full product-browsing experience.',
     url: 'https://github.com/aprilsears/MockStore',
     icon: '🛒',
+    preview: '', // Add screenshot: /images/portfolio/mock-store.png
     tech: ['Vue', 'JavaScript', 'CSS'],
     tags: ['Vue', 'JavaScript'],
   },
@@ -112,6 +131,7 @@ const projects = [
     desc: 'Business website for A Web of Code — built with Vue 3, Tailwind CSS v4, and tsParticles.',
     url: 'https://github.com/aprilsears/awebofcode',
     icon: '🌐',
+    preview: '', // Add screenshot: /images/portfolio/a-web-of-code.png
     tech: ['Vue', 'Tailwind', 'Vite'],
     tags: ['Vue'],
   },
@@ -120,6 +140,7 @@ const projects = [
     desc: 'Exercise and wellness tracking app rebuilt in Vue with a component-driven architecture.',
     url: 'https://github.com/aprilsears/chronically-well-vue',
     icon: '🏃',
+    preview: '', // Add screenshot: /images/portfolio/chronically-well-vue.png
     tech: ['Vue', 'JavaScript', 'CSS'],
     tags: ['Vue'],
   },
@@ -128,6 +149,7 @@ const projects = [
     desc: 'Web dev capstone project — a wellness and exercise tracker built with vanilla JavaScript.',
     url: 'https://github.com/aprilsears/chronically-well',
     icon: '💪',
+    preview: '', // Add screenshot: /images/portfolio/chronically-well.png
     tech: ['JavaScript', 'HTML', 'CSS'],
     tags: ['JavaScript'],
   },
@@ -136,6 +158,7 @@ const projects = [
     desc: 'Interactive weather dashboard with multiple location support and live forecast data.',
     url: 'https://github.com/aprilsears/weather-dashboard',
     icon: '⛅',
+    preview: '', // Add screenshot: /images/portfolio/weather-dashboard.png
     tech: ['JavaScript', 'API', 'HTML', 'CSS'],
     tags: ['JavaScript'],
   },
@@ -144,6 +167,7 @@ const projects = [
     desc: 'Movie watchlist with personalized star ratings — search, save, and rate your films.',
     url: 'https://github.com/aprilsears/movie-watchlist-app',
     icon: '🎬',
+    preview: '', // Add screenshot: /images/portfolio/movie-watchlist.png
     tech: ['HTML', 'CSS', 'JavaScript'],
     tags: ['HTML/CSS', 'JavaScript'],
   },
@@ -152,6 +176,7 @@ const projects = [
     desc: 'Server-rendered quote card app built with Node.js and Express.',
     url: 'https://github.com/aprilsears/quote-card-express',
     icon: '💬',
+    preview: '', // Add screenshot: /images/portfolio/quote-card.png
     tech: ['Node.js', 'Express', 'JavaScript'],
     tags: ['Node.js', 'JavaScript'],
   },
@@ -160,6 +185,7 @@ const projects = [
     desc: 'Earlier personal portfolio and blog site built with HTML and CSS.',
     url: 'https://github.com/aprilsears/aprilsears-site-blog',
     icon: '✍️',
+    preview: '', // Add screenshot: /images/portfolio/portfolio-blog.png
     tech: ['HTML', 'CSS'],
     tags: ['HTML/CSS'],
   },
@@ -168,6 +194,7 @@ const projects = [
     desc: 'A clean, functional to-do list app with task management and styling.',
     url: 'https://github.com/aprilsears/to-do-list',
     icon: '✅',
+    preview: '', // Add screenshot: /images/portfolio/to-do-list.png
     tech: ['HTML', 'CSS', 'JavaScript'],
     tags: ['HTML/CSS', 'JavaScript'],
   },
@@ -176,6 +203,7 @@ const projects = [
     desc: 'A themed CSS contact card project with a Black Widow design.',
     url: 'https://github.com/aprilsears/Black-Widow-Contact-Card',
     icon: '🕷️',
+    preview: '', // Add screenshot: /images/portfolio/black-widow-card.png
     tech: ['HTML', 'CSS'],
     tags: ['HTML/CSS'],
   },

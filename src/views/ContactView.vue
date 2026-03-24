@@ -170,7 +170,7 @@ async function submitForm() {
   error.value = false
 
   try {
-    const res = await fetch('https://formspree.io/f/mjgabaop', {
+    const res = await fetch(import.meta.env.VITE_FORMSPREE_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify(form),
