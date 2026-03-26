@@ -1,4 +1,5 @@
 <template>
+  <div>
   <!-- Hero -->
   <section class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-24 overflow-hidden">
 
@@ -102,6 +103,7 @@
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 <script setup>
