@@ -198,15 +198,6 @@ const projects = [
     tech: ['HTML', 'CSS', 'JavaScript'],
     tags: ['HTML/CSS', 'JavaScript'],
   },
-  {
-    title: 'Black Widow Contact Card',
-    desc: 'A themed CSS contact card project with a Black Widow design.',
-    url: 'https://github.com/aprilsears/Black-Widow-Contact-Card',
-    icon: '🕷️',
-    preview: '', // Add screenshot: /images/portfolio/black-widow-card.png
-    tech: ['HTML', 'CSS'],
-    tags: ['HTML/CSS'],
-  },
 ]
 
 const filteredProjects = computed(() =>
