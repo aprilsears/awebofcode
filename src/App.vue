@@ -114,19 +114,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import { useAuth } from '@/composables/useAuth'
 
+const { currentUser } = useAuth()
 const menuOpen = ref(false)
 const currentYear = new Date().getFullYear()
 
-const links = [
+const links = computed(() => [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/portfolio', label: 'Portfolio' },
   { to: '/contact', label: 'Contact' },
-]
+  currentUser.value
+    ? { to: '/dashboard', label: 'Client Portal' }
+    : { to: '/login', label: 'Client Login' },
+])
 </script>
 
 <style>
