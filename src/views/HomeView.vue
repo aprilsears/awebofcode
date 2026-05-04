@@ -3,8 +3,9 @@
   <!-- Hero -->
   <section class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-24 overflow-hidden">
 
-    <!-- Particle network background -->
+    <!-- Particle network background (desktop only — too CPU-heavy on mobile) -->
     <vue-particles
+      v-if="!isMobile"
       id="tsparticles"
       class="absolute inset-0 w-full h-full"
       :options="{
@@ -106,7 +107,13 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+
+const isMobile = ref(false)
+onMounted(() => {
+  isMobile.value = window.matchMedia('(max-width: 767px)').matches
+})
 
 const testimonials = [
   {
