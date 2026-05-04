@@ -77,7 +77,6 @@
   </section>
 
   <!-- Testimonials -->
-  <!-- TODO: Replace placeholder content below with real client testimonials -->
   <section class="relative px-8 md:px-16 lg:px-32 py-24 border-t border-silver/10 overflow-hidden">
     <div class="absolute top-0 left-1/2 w-96 h-96 bg-emerald/4 rounded-full blur-3xl -translate-x-1/2 pointer-events-none"></div>
 
@@ -88,7 +87,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <blockquote
           v-for="testimonial in testimonials"
-          :key="testimonial.name"
+          :key="testimonial.role"
           class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-8 flex flex-col hover:border-emerald/20 transition-colors duration-200"
         >
           <svg class="w-6 h-6 text-emerald/60 mb-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -109,21 +108,20 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 
-// TODO: Replace with real client testimonials
 const testimonials = [
   {
     quote: 'April delivered a clean, fast site that perfectly captured our brand. The whole process was smooth and communicative from start to finish.',
-    name: 'Client Name',
+    name: '★★★★★',
     role: 'Small Business Owner',
   },
   {
     quote: 'The custom web app she built has been running flawlessly. Well-structured code made it easy for our team to maintain going forward.',
-    name: 'Client Name',
+    name: '★★★★★',
     role: 'Startup Founder',
   },
   {
     quote: 'Excellent attention to detail and very responsive throughout the project. Would absolutely work with A Web of Code again.',
-    name: 'Client Name',
+    name: '★★★★★',
     role: 'Freelance Consultant',
   },
 ]

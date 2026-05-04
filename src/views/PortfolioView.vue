@@ -37,7 +37,7 @@
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <a
           v-for="project in filteredProjects"
-          :key="project.name"
+          :key="project.title"
           :href="project.url"
           target="_blank"
           rel="noopener noreferrer"

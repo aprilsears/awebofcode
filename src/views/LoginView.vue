@@ -15,8 +15,9 @@
 
       <form class="space-y-5" @submit.prevent="handleSignIn">
         <div>
-          <label class="block text-silver text-sm font-medium mb-2">Email</label>
+          <label for="login-email" class="block text-silver text-sm font-medium mb-2">Email</label>
           <input
+            id="login-email"
             v-model="email"
             type="email"
             required
@@ -26,8 +27,9 @@
         </div>
 
         <div>
-          <label class="block text-silver text-sm font-medium mb-2">Password</label>
+          <label for="login-password" class="block text-silver text-sm font-medium mb-2">Password</label>
           <input
+            id="login-password"
             v-model="password"
             type="password"
             required
@@ -36,7 +38,7 @@
           />
         </div>
 
-        <div v-if="error" class="bg-red-900/20 border border-red-500/30 rounded-xl px-6 py-4 text-red-400 text-sm">
+        <div v-if="error" role="alert" class="bg-red-900/20 border border-red-500/30 rounded-xl px-6 py-4 text-red-400 text-sm">
           {{ error }}
         </div>
 

@@ -28,8 +28,9 @@
       >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
-            <label class="block text-silver text-sm font-medium mb-2">Name *</label>
+            <label for="contact-name" class="block text-silver text-sm font-medium mb-2">Name *</label>
             <input
+              id="contact-name"
               v-model="form.name"
               type="text"
               required
@@ -38,8 +39,9 @@
             />
           </div>
           <div>
-            <label class="block text-silver text-sm font-medium mb-2">Email *</label>
+            <label for="contact-email" class="block text-silver text-sm font-medium mb-2">Email *</label>
             <input
+              id="contact-email"
               v-model="form.email"
               type="email"
               required
@@ -50,8 +52,9 @@
         </div>
 
         <div>
-          <label class="block text-silver text-sm font-medium mb-2">Service of Interest</label>
+          <label for="contact-service" class="block text-silver text-sm font-medium mb-2">Service of Interest</label>
           <select
+            id="contact-service"
             v-model="form.service"
             class="w-full bg-steel/30 backdrop-blur-sm border border-silver/20 rounded-xl px-4 py-3 text-ivory focus:outline-none focus:border-emerald/60 transition-colors appearance-none [&>option]:bg-navy [&>option]:text-ivory"
           >
@@ -67,8 +70,9 @@
         </div>
 
         <div>
-          <label class="block text-silver text-sm font-medium mb-2">Tell us about your project *</label>
+          <label for="contact-message" class="block text-silver text-sm font-medium mb-2">Tell us about your project *</label>
           <textarea
+            id="contact-message"
             v-model="form.message"
             required
             rows="6"
@@ -78,12 +82,12 @@
         </div>
 
         <!-- Success message -->
-        <div v-if="submitted" class="bg-emerald/10 border border-emerald/30 rounded-xl px-6 py-4 text-emerald text-sm">
+        <div v-if="submitted" role="alert" class="bg-emerald/10 border border-emerald/30 rounded-xl px-6 py-4 text-emerald text-sm">
           ✓ Message sent! We'll be in touch within 1–2 business days.
         </div>
 
         <!-- Error message -->
-        <div v-if="error" class="bg-red-900/20 border border-red-500/30 rounded-xl px-6 py-4 text-red-400 text-sm">
+        <div v-if="error" role="alert" class="bg-red-900/20 border border-red-500/30 rounded-xl px-6 py-4 text-red-400 text-sm">
           Something went wrong. Please try again or email us directly.
         </div>
 

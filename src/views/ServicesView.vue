@@ -89,7 +89,7 @@
         <h2 class="text-3xl font-bold text-ivory mb-10">Common questions</h2>
         <div class="space-y-4">
           <div
-            v-for="faq in faqs"
+            v-for="(faq, i) in faqs"
             :key="faq.q"
             class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl overflow-hidden"
           >
@@ -97,18 +97,20 @@
               class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-steel/50 transition-colors duration-200"
               @click="faq.open = !faq.open"
               :aria-expanded="faq.open"
+              :aria-controls="`faq-answer-${i}`"
             >
               <span class="text-ivory font-semibold pr-4">{{ faq.q }}</span>
               <svg
                 class="w-5 h-5 text-emerald shrink-0 transition-transform duration-200"
                 :class="{ 'rotate-180': faq.open }"
+                aria-hidden="true"
                 fill="none" stroke="currentColor" viewBox="0 0 24 24"
               >
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             <Transition name="accordion">
-              <div v-if="faq.open" class="px-6 pb-5">
+              <div v-if="faq.open" :id="`faq-answer-${i}`" class="px-6 pb-5">
                 <p class="text-silver text-sm leading-relaxed">{{ faq.a }}</p>
               </div>
             </Transition>
