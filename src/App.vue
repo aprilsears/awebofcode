@@ -95,7 +95,7 @@
 
     <!-- Bottom bar -->
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-silver/10">
-      <img src="/src/assets/logo.png" alt="A Web of Code" class="w-16 h-auto mix-blend-screen opacity-60" />
+      <img src="/images/logo.webp" alt="A Web of Code" width="64" height="64" class="w-16 h-auto mix-blend-screen opacity-60" />
       <p class="text-silver/50 text-xs">&copy; {{ currentYear }} A Web of Code. All rights reserved.</p>
       <div class="flex gap-4">
         <a href="https://github.com/aprilsears/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-silver/50 hover:text-emerald transition-colors duration-200">
