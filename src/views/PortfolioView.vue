@@ -122,7 +122,7 @@ const projects = [
     desc: 'A mock e-commerce storefront demonstrating the ability to build and manage a full product-browsing experience.',
     url: 'https://github.com/aprilsears/MockStore',
     icon: '🛒',
-    preview: '', // Add screenshot: /images/portfolio/mock-store.png
+    preview: '/images/portfolio/mock-store.png',
     tech: ['Vue', 'JavaScript', 'CSS'],
     tags: ['Vue', 'JavaScript'],
   },
@@ -131,7 +131,7 @@ const projects = [
     desc: 'Business website for A Web of Code — built with Vue 3, Tailwind CSS v4, and tsParticles.',
     url: 'https://github.com/aprilsears/awebofcode',
     icon: '🌐',
-    preview: '', // Add screenshot: /images/portfolio/a-web-of-code.png
+    preview: '/images/portfolio/a-web-of-code.png',
     tech: ['Vue', 'Tailwind', 'Vite'],
     tags: ['Vue'],
   },
@@ -140,7 +140,7 @@ const projects = [
     desc: 'Exercise and wellness tracking app rebuilt in Vue with a component-driven architecture.',
     url: 'https://github.com/aprilsears/chronically-well-vue',
     icon: '🏃',
-    preview: '', // Add screenshot: /images/portfolio/chronically-well-vue.png
+    preview: '/images/portfolio/chronically-well-vue.png',
     tech: ['Vue', 'JavaScript', 'CSS'],
     tags: ['Vue'],
   },
@@ -149,9 +149,27 @@ const projects = [
     desc: 'Web dev capstone project — a wellness and exercise tracker built with vanilla JavaScript.',
     url: 'https://github.com/aprilsears/chronically-well',
     icon: '💪',
-    preview: '', // Add screenshot: /images/portfolio/chronically-well.png
+    preview: '/images/portfolio/chronically-well.png',
     tech: ['JavaScript', 'HTML', 'CSS'],
     tags: ['JavaScript'],
+  },
+  {
+    title: 'Movie Watchlist App',
+    desc: 'Movie watchlist with personalized star ratings — search, save, and rate your films.',
+    url: 'https://github.com/aprilsears/movie-watchlist-app',
+    icon: '🎬',
+    preview: '/images/portfolio/movie-watchlist.png',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['HTML/CSS', 'JavaScript'],
+  },
+  {
+    title: 'Personal Portfolio & Blog',
+    desc: 'Earlier personal portfolio and blog site built with HTML and CSS.',
+    url: 'https://github.com/aprilsears/aprilsears-site-blog',
+    icon: '✍️',
+    preview: '/images/portfolio/portfolio-blog.png',
+    tech: ['HTML', 'CSS'],
+    tags: ['HTML/CSS'],
   },
   {
     title: 'Weather Dashboard',
@@ -163,15 +181,6 @@ const projects = [
     tags: ['JavaScript'],
   },
   {
-    title: 'Movie Watchlist App',
-    desc: 'Movie watchlist with personalized star ratings — search, save, and rate your films.',
-    url: 'https://github.com/aprilsears/movie-watchlist-app',
-    icon: '🎬',
-    preview: '', // Add screenshot: /images/portfolio/movie-watchlist.png
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    tags: ['HTML/CSS', 'JavaScript'],
-  },
-  {
     title: 'Quote Card (Express)',
     desc: 'Server-rendered quote card app built with Node.js and Express.',
     url: 'https://github.com/aprilsears/quote-card-express',
@@ -179,15 +188,6 @@ const projects = [
     preview: '', // Add screenshot: /images/portfolio/quote-card.png
     tech: ['Node.js', 'Express', 'JavaScript'],
     tags: ['Node.js', 'JavaScript'],
-  },
-  {
-    title: 'Personal Portfolio & Blog',
-    desc: 'Earlier personal portfolio and blog site built with HTML and CSS.',
-    url: 'https://github.com/aprilsears/aprilsears-site-blog',
-    icon: '✍️',
-    preview: '', // Add screenshot: /images/portfolio/portfolio-blog.png
-    tech: ['HTML', 'CSS'],
-    tags: ['HTML/CSS'],
   },
   {
     title: 'To-Do List',

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^9.2.0",
-    "@supabase/supabase-js": "^2.104.0",
+    "@supabase/supabase-js": "^2.104.1",
     "@tsparticles/slim": "^3.9.1",
     "@tsparticles/vue3": "^3.0.1",
     "@vercel/analytics": "^1.6.1",
