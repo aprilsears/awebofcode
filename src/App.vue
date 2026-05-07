@@ -111,12 +111,15 @@
       </div>
     </div>
   </footer>
+
+  <SpeedInsights />
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { currentUser } = useAuth()
 const menuOpen = ref(false)
