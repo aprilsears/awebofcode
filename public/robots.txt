@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://awebofcode.com/sitemap.xml
