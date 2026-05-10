@@ -3,47 +3,9 @@
   <!-- Hero -->
   <section class="relative min-h-screen flex flex-col justify-center px-8 md:px-16 lg:px-32 py-24 overflow-hidden">
 
-    <!-- Particle network background (desktop only — too CPU-heavy on mobile) -->
-    <vue-particles
-      v-if="!isMobile"
-      id="tsparticles"
-      class="absolute inset-0 w-full h-full"
-      :options="{
-        background: { color: { value: 'transparent' } },
-        fpsLimit: 60,
-        interactivity: {
-          events: {
-            onHover: { enable: true, mode: 'grab' },
-            onClick: { enable: true, mode: 'push' }
-          },
-          modes: {
-            grab: { distance: 160, links: { opacity: 0.6 } },
-            push: { quantity: 3 }
-          }
-        },
-        particles: {
-          color: { value: '#1A7A4A' },
-          links: {
-            color: '#A9B8C3',
-            distance: 150,
-            enable: true,
-            opacity: 0.3,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 0.8,
-            direction: 'none',
-            outModes: 'out'
-          },
-          number: { value: 90, density: { enable: true } },
-          opacity: { value: 0.5 },
-          shape: { type: 'circle' },
-          size: { value: { min: 1, max: 2.5 } }
-        },
-        detectRetina: true
-      }"
-    />
+    <!-- Particle network background -->
+<ParticlesBackground v-if="!isMobile" />
+
 
     <!-- Content sits above particles -->
     <div class="relative z-10">
@@ -109,6 +71,10 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
+const ParticlesBackground = defineAsyncComponent(() =>
+  import('@/components/ParticlesBackground.vue')
+)
 
 const isMobile = ref(false)
 onMounted(() => {
