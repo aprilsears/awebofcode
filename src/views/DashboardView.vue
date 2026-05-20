@@ -22,13 +22,13 @@
         </button>
       </section>
 
-      <div v-if="loading" class="text-silver text-sm">Loading your account...</div>
+      <div v-if="loading" role="status" aria-live="polite" class="text-silver text-sm">Loading your account...</div>
 
       <div v-else class="space-y-12">
 
         <!-- Active Plans -->
-        <section>
-          <h2 class="text-ivory font-semibold text-xl mb-6">Active Plans</h2>
+        <section aria-labelledby="plans-heading">
+          <h2 id="plans-heading" class="text-ivory font-semibold text-xl mb-6">Active Plans</h2>
           <div v-if="subscriptions.length === 0" class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-6 text-silver text-sm">
             No active plans. Contact us to get started.
           </div>
@@ -56,8 +56,8 @@
         </section>
 
         <!-- Manage Billing -->
-        <section>
-          <h2 class="text-ivory font-semibold text-xl mb-6">Billing</h2>
+        <section aria-labelledby="billing-heading">
+          <h2 id="billing-heading" class="text-ivory font-semibold text-xl mb-6">Billing</h2>
           <div class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-6 flex items-center justify-between flex-wrap gap-4">
             <div>
               <p class="text-ivory font-medium mb-1">Manage payment method &amp; subscriptions</p>
@@ -77,13 +77,13 @@
         </section>
 
         <!-- Invoice History -->
-        <section>
-          <h2 class="text-ivory font-semibold text-xl mb-6">Invoice History</h2>
+        <section aria-labelledby="invoices-heading">
+          <h2 id="invoices-heading" class="text-ivory font-semibold text-xl mb-6">Invoice History</h2>
           <div v-if="invoices.length === 0" class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl p-6 text-silver text-sm">
             No invoices yet.
           </div>
           <div v-else class="bg-steel/30 backdrop-blur-sm border border-silver/10 rounded-xl overflow-hidden">
-            <table class="w-full text-sm">
+            <table class="w-full text-sm" aria-label="Invoice history">
               <thead>
                 <tr class="border-b border-silver/10">
                   <th class="text-left text-silver font-medium px-6 py-4">Date</th>

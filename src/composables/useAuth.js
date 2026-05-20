@@ -3,13 +3,15 @@ import { supabase } from '@/lib/supabase'
 
 const currentUser = ref(null)
 
-supabase.auth.getSession().then(({ data: { session } }) => {
-  currentUser.value = session?.user ?? null
-})
+if (supabase) {
+  supabase.auth.getSession().then(({ data: { session } }) => {
+    currentUser.value = session?.user ?? null
+  })
 
-supabase.auth.onAuthStateChange((_event, session) => {
-  currentUser.value = session?.user ?? null
-})
+  supabase.auth.onAuthStateChange((_event, session) => {
+    currentUser.value = session?.user ?? null
+  })
+}
 
 export function useAuth() {
   async function signIn(email, password) {
