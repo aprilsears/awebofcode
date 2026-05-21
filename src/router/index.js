@@ -9,6 +9,8 @@ const routes = [
   { path: '/contact', component: () => import('../views/ContactView.vue'), meta: { title: 'Contact | A Web of Code' } },
   { path: '/login', component: () => import('../views/LoginView.vue'), meta: { title: 'Client Login | A Web of Code' } },
   { path: '/dashboard', component: () => import('../views/DashboardView.vue'), meta: { title: 'Client Portal | A Web of Code', requiresAuth: true } },
+  { path: '/privacy', component: () => import('../views/PrivacyView.vue'), meta: { title: 'Privacy Policy | A Web of Code' } },
+  { path: '/terms', component: () => import('../views/TermsView.vue'), meta: { title: 'Terms of Service | A Web of Code' } },
 ]
 
 const router = createRouter({

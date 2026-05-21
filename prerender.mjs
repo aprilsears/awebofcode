@@ -31,6 +31,16 @@ const routes = [
     title: 'Contact | A Web of Code',
     description: 'Get in touch with A Web of Code to discuss your web design or development project.',
   },
+  {
+    path: '/privacy',
+    title: 'Privacy Policy | A Web of Code',
+    description: 'Privacy Policy for A Web of Code — how we collect, use, and protect your information.',
+  },
+  {
+    path: '/terms',
+    title: 'Terms of Service | A Web of Code',
+    description: 'Terms of Service for A Web of Code — governing use of this site and the client portal.',
+  },
 ]
 
 async function prerender() {

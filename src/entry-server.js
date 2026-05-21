@@ -9,6 +9,8 @@ const routes = [
   { path: '/services', component: () => import('./views/ServicesView.vue') },
   { path: '/portfolio', component: () => import('./views/PortfolioView.vue') },
   { path: '/contact', component: () => import('./views/ContactView.vue') },
+  { path: '/privacy', component: () => import('./views/PrivacyView.vue') },
+  { path: '/terms', component: () => import('./views/TermsView.vue') },
 ]
 
 export async function render(url) {

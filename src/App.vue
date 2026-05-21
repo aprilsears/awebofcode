@@ -48,6 +48,8 @@
     </Transition>
   </div>
 
+  <CookieNotice />
+
   <main>
     <RouterView v-slot="{ Component }">
       <Transition name="fade">
@@ -99,6 +101,10 @@
     <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-silver/10">
       <img src="/images/logo.webp" alt="A Web of Code" width="64" height="64" class="w-16 h-auto mix-blend-screen opacity-60" />
       <p class="text-silver/50 text-xs">&copy; {{ currentYear }} A Web of Code. All rights reserved.</p>
+      <div class="flex gap-4 text-xs">
+        <RouterLink to="/privacy" class="text-silver/50 hover:text-emerald transition-colors duration-200">Privacy Policy</RouterLink>
+        <RouterLink to="/terms" class="text-silver/50 hover:text-emerald transition-colors duration-200">Terms of Service</RouterLink>
+      </div>
       <div class="flex gap-4">
         <a href="https://github.com/aprilsears/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-silver/50 hover:text-emerald transition-colors duration-200">
           <svg aria-hidden="true" focusable="false" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -119,6 +125,7 @@
 import { ref, computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
+import CookieNotice from '@/components/CookieNotice.vue'
 
 const { currentUser } = useAuth()
 const menuOpen = ref(false)
