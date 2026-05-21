@@ -33,6 +33,7 @@ export function useScrollReveal() {
     )
 
     document.querySelectorAll('[data-reveal]').forEach((el) => {
+      el.classList.add('reveal-ready')
       observer.observe(el)
     })
   })

@@ -13,8 +13,8 @@ body {
   color: #F0EDE5;
 }
 
-/* Scroll reveal animation */
-[data-reveal] {
+/* Scroll reveal animation — initial hide applied by JS to avoid blocking FCP on prerendered content */
+[data-reveal].reveal-ready {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -22,4 +22,5 @@ body {
 [data-reveal].revealed {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
