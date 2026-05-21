@@ -48,6 +48,7 @@
     </Transition>
   </div>
 
+  <SpeedInsights />
   <CookieNotice />
 
   <main>
@@ -126,6 +127,7 @@ import { ref, computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { useAuth } from '@/composables/useAuth'
 import CookieNotice from '@/components/CookieNotice.vue'
+import { SpeedInsights } from '@vercel/speed-insights/vue'
 
 const { currentUser } = useAuth()
 const menuOpen = ref(false)
