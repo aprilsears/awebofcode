@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=optional');
+@import "tailwindcss";
 
 @theme {
   --color-navy: #0D1B2A;
