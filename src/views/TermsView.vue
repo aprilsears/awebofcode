@@ -11,7 +11,7 @@
         <p class="text-silver text-sm">Last updated: May 21, 2026</p>
         <p class="text-silver text-sm mt-4 leading-relaxed max-w-2xl">
           These Terms of Service govern your use of awebofcode.com and the client portal operated by
-          A Web of Code ("we," "us," or "our"). By accessing this site or using the client portal,
+          A Web of Code, LLC ("we," "us," or "our"). By accessing this site or using the client portal,
           you agree to these terms. If you do not agree, do not use this site.
         </p>
         <p class="text-silver/60 text-xs mt-4 italic">
@@ -76,12 +76,12 @@
 
         <section aria-labelledby="liability">
           <h2 id="liability" class="text-ivory font-semibold text-xl mb-4">7. Limitation of Liability</h2>
-          <p>To the fullest extent permitted by law, A Web of Code and its owner shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of this site or our services. Our total liability to you for any claim shall not exceed the amounts paid by you to us in the three months preceding the claim.</p>
+          <p>To the fullest extent permitted by law, A Web of Code, LLC and its members shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of this site or our services. Our total liability to you for any claim shall not exceed the amounts paid by you to us in the three months preceding the claim.</p>
         </section>
 
         <section aria-labelledby="governing-law">
           <h2 id="governing-law" class="text-ivory font-semibold text-xl mb-4">8. Governing Law</h2>
-          <p>These Terms are governed by the laws of the United States and the state in which A Web of Code is registered, without regard to conflict of law principles. Any disputes shall be resolved in the courts of that state.</p>
+          <p>These Terms are governed by the laws of the Commonwealth of Kentucky, without regard to conflict of law principles. Any disputes shall be resolved in the courts of Kentucky.</p>
         </section>
 
         <section aria-labelledby="changes-terms">

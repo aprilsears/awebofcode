@@ -10,7 +10,7 @@
         <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Privacy Policy</h1>
         <p class="text-silver text-sm">Last updated: May 21, 2026</p>
         <p class="text-silver text-sm mt-4 leading-relaxed max-w-2xl">
-          This Privacy Policy describes how A Web of Code ("we," "us," or "our") collects, uses,
+          This Privacy Policy describes how A Web of Code, LLC ("we," "us," or "our") collects, uses,
           and shares information when you visit awebofcode.com or use our client portal.
           Please read it carefully. By using this site you agree to the practices described here.
         </p>
