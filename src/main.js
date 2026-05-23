@@ -9,3 +9,8 @@ inject()
 createApp(App)
   .use(router)
   .mount('#app')
+
+app.use(VueGtag, {
+  property: {id:
+    import.meta.env.VITE_GA_TRACKING_ID }
+  }, router)
