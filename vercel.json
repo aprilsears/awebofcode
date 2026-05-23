@@ -1,4 +1,6 @@
 {
+  "outputDirectory": "dist",
+  "buildCommand": "node prerender.mjs",
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ],
