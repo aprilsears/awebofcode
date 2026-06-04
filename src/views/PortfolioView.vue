@@ -182,23 +182,15 @@ const projects = [
     tags: ['JavaScript'],
   },
   {
-    title: 'Quote Card (Express)',
-    desc: 'Server-rendered quote card app built with Node.js and Express.',
-    url: 'https://github.com/aprilsears/quote-card-express',
-    icon: '💬',
-    preview: '', // Add screenshot: /images/portfolio/quote-card.png
-    tech: ['Node.js', 'Express', 'JavaScript'],
-    tags: ['Node.js', 'JavaScript'],
+    title: 'Book Store APP',
+    desc: 'Server-rendered book store app built with React, Node.js and Express.',
+    url: 'https://github.com/aprilsears/book-store',
+    icon:'📚',
+    preview: '/images/portfolio/bookstore.png',
+    tech: ['React', 'Node.js', 'Express', 'JavaScript'],
+    tags: ['Node.js', 'React', 'JavaScript'], 
   },
-  {
-    title: 'To-Do List',
-    desc: 'A clean, functional to-do list app with task management and styling.',
-    url: 'https://github.com/aprilsears/to-do-list',
-    icon: '✅',
-    preview: '', // Add screenshot: /images/portfolio/to-do-list.png
-    tech: ['HTML', 'CSS', 'JavaScript'],
-    tags: ['HTML/CSS', 'JavaScript'],
-  },
+
 ]
 
 const filteredProjects = computed(() =>
