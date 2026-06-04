@@ -115,7 +115,7 @@ useScrollReveal()
 
 const activeFilter = ref('All')
 
-const filters = ['All', 'Vue', 'JavaScript', 'HTML/CSS', 'Node.js']
+const filters = ['All', 'Vue', 'JavaScript', 'HTML/CSS', 'Node.js', 'React']
 
 const projects = [
   {
@@ -173,12 +173,12 @@ const projects = [
     tags: ['HTML/CSS'],
   },
   {
-    title: 'Weather Dashboard',
-    desc: 'Interactive weather dashboard with multiple location support and live forecast data.',
+    title: 'Dashboard',
+    desc: 'Interactive dashboard with live data.',
     url: 'https://github.com/aprilsears/weather-dashboard',
-    icon: '⛅',
-    preview: '', // Add screenshot: /images/portfolio/weather-dashboard.png
-    tech: ['JavaScript', 'API', 'HTML', 'CSS'],
+    icon: '📊',
+    preview: '/images/portfolio/dashboard.png',
+    tech: ['JavaScript', 'API', 'HTML', 'CSS', 'React'],
     tags: ['JavaScript'],
   },
   {
