@@ -35,47 +35,7 @@ Live site: [awebofcode.com](https://awebofcode.com)
 
 - Node.js 18+ and npm
 
-### Install and run
 
-```bash
-git clone <your-repo-url>
-cd awebofcode
-npm install
-npm run dev
-```
-
-The dev server runs at `http://localhost:5173`.
-
-### Environment variables
-
-Create a `.env` file in the project root:
-
-```env
-VITE_FORMSPREE_ENDPOINT=
-VITE_SUPABASE_URL=
-VITE_SUPABASE_ANON_KEY=
-VITE_STRIPE_PUBLISHABLE_KEY=
-```
-
-The serverless functions in `api/` also need these set in your Vercel project settings (never commit them):
-
-```env
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-SUPABASE_SERVICE_ROLE_KEY=
-ALLOWED_PRICE_IDS=      # comma-separated Stripe price IDs
-APP_ORIGIN=             # e.g. https://awebofcode.com
-```
-
-## Scripts
-
-| Command | What it does |
-| --- | --- |
-| `npm run dev` | Start the Vite dev server |
-| `npm run build` | Build and prerender all public routes to `dist/` |
-| `npm run preview` | Preview the production build locally |
-| `npm test` | Run the test suite once |
-| `npm run test:watch` | Run tests in watch mode |
 
 ## Project Structure
 
